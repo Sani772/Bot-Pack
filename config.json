@@ -6,6 +6,8 @@
   "DeveloperMode": true,
   "autoCreateDB": true,
   "allowInbox": false,
+  "ApiUrl": "https://xakibin-fs8d.onrender.com",
+    "ApiUrlX":"https://gpt-19zs.onrender.com",
   "autoClean": true,
   "adminOnly": false,
   "encryptSt": true,
