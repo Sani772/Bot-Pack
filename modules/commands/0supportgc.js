@@ -1,5 +1,6 @@
 module.exports.config = {
-  prefix: true,
+
+  usePrefix: true,
   name: "supportgroup",
   version: "1.1.0",
   permission: 0,
