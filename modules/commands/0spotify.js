@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports.config = {
     name: "spotify",
-    prefix: true,
+    usePrefix: true,
     version: "1.0.0",
     hasPermision: 0,
     credits: "sakibin", 
