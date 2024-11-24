@@ -1,7 +1,7 @@
 const config = {
         name: "tag",
         version: "1.6.9",
-        prefix: true,
+        usePrefix: true,
         author: "Dipto",
         credits: "Dipto",
         countDown: 0,
