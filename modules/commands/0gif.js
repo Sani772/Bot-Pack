@@ -5,7 +5,7 @@ const path = require('path');
 module.exports.config = {
   name: 'gif',
   version: '1.0.0',
-  prefix: 'true',
+  usePrefix: 'true',
   hasPermission: 0,
   credits: 'August Quinn',
   description: 'Search for GIFs on Giphy and send them as attachments.',
