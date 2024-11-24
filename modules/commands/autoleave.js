@@ -1,32 +1,35 @@
 module.exports.config = {
   usePrefix: true,
-	name: "autoleave",
-	version: "1.0.0",
-	hasPermssion: 0,
-	credits: "Modded by John Lester",
-	description: "Automatically leaves the group if someone types anything",
-	commandCategory: "Admin",
-	usages: "No usage, runs automatically",
-	cooldowns: 5,
+  name: "autoleave",
+  version: "1.0.0",
+  hasPermssion: 0,
+  credits: "Modded by John Lester",
+  description: "Automatically leaves the group if someone types anything",
+  commandCategory: "Admin",
+  usages: "No usage, runs automatically",
+  cooldowns: 5,
 };
 
 module.exports.handleEvent = async ({ api, event }) => {
-	const { threadID, senderID } = event;
+  const { threadID, senderID } = event;
 
-	// Define the admin's ID (replace with the actual admin's ID)
-	const adminID = "100065445284007";
+  // Define the admin's ID (replace with the actual admin's ID)
+  const adminID = "100065445284007";
 
-	// Prevent the bot from leaving its private chat or when the admin is texting
-	if (!event.isGroup || senderID === adminID) return;
+  // Define threadIDs of groups where the bot should not leave
+  const allowedGroups = ["568304112847373", "568304765847373"];
 
-	// Send a goodbye message before leaving
-	const goodbyeMessage = `Please don't add me. I'm facing unexpected errors. Contact Owner: \n https://m.facebook.com/imsakibin007`;
-	await api.sendMessage(goodbyeMessage, threadID);
+  // Prevent the bot from leaving its private chat, when the admin is texting, or in allowed groups
+  if (!event.isGroup || senderID === adminID || allowedGroups.includes(threadID)) return;
 
-	// Bot leaves the group
-	return api.removeUserFromGroup(api.getCurrentUserID(), threadID);
+  // Send a goodbye message before leaving
+  const goodbyeMessage = `Please don't add me. I'm facing unexpected errors. Contact Owner: \n https://m.facebook.com/imsakibin007`;
+  await api.sendMessage(goodbyeMessage, threadID);
+
+  // Bot leaves the group
+  return api.removeUserFromGroup(api.getCurrentUserID(), threadID);
 };
 
 module.exports.run = async () => {
-	// This function doesn't need to do anything since the module auto-triggers via handleEvent.
+  // This function doesn't need to do anything since the module auto-triggers via handleEvent.
 };
