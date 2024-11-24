@@ -50,12 +50,13 @@ module.exports.run = async function({ api, event, Users }) {
     api.changeNickname(`${(!global.config.BOTNAME) ? "Your Baby" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
     
     let gifUrl = 'https://i.imgur.com/4HMupHz.gif';
-let gifPath = __dirname + '/cache/join/join.gif';
+let gifPath = __dirname + '/cache/join.gif';
 
+let gifPaths = __dirname + '/cache/join/join.gif';
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 .then(response => {
     fs.writeFileSync(gifPath, response.data);
-    return api.sendMessage({ body: `✅ Group Connection in ${threadName} at ${session} success! \n\n➭ Current Commands: ${commands.size}\n➭ Bot Prefix: ${global.config.PREFIX}\n➭ Version: ${global.config.version}\n➭ Admin: ‹${ADMIN}›\n➭ Use ${PRFX}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, attachment: fs.createReadStream(gifPath)}, threadID);
+    return api.sendMessage({ body: `✅ Group Connection in ${threadName} at ${session} success! \n\n➭ Current Commands: ${commands.size}\n➭ Bot Prefix: ${global.config.PREFIX}\n➭ Version: ${global.config.version}\n➭ Admin: ‹${ADMIN}›\n➭ Use ${PRFX}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, attachment: fs.createReadStream(gifPaths)}, threadID);
 })
 .catch(error => {
     console.error(error);
