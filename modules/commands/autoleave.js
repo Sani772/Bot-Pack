@@ -11,16 +11,13 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async ({ api, event }) => {
-  const { threadID, senderID } = event;
-
-  // Define the admin's ID (replace with the actual admin's ID)
-  const adminID = "100065445284007";
+  const { threadID } = event;
 
   // Define threadIDs of groups where the bot should not leave
   const allowedGroups = ["568304112847373", "568304765847373"];
 
-  // Prevent the bot from leaving its private chat, when the admin is texting, or in allowed groups
-  if (!event.isGroup || senderID === adminID || allowedGroups.includes(threadID)) return;
+  // Prevent the bot from leaving allowed groups or its private chat
+  if (!event.isGroup || allowedGroups.includes(threadID)) return;
 
   // Send a goodbye message before leaving
   const goodbyeMessage = `Please don't add me. I'm facing unexpected errors. Contact Owner: \n https://m.facebook.com/imsakibin007`;
