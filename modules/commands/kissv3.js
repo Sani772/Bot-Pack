@@ -1,4 +1,6 @@
-module.exports.config = { prefix: true,
+module.exports.config = { 
+    
+    usePrefix: true,
     name: "kiss",
     version: "7.3.1",
     permission: 0,
