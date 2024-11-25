@@ -9,7 +9,7 @@ module.exports.config = {
   hasPermission: 0,
   credits: 'August Quinn',
   description: 'Search for GIFs on Giphy and send them as attachments.',
-  category: 'Fun',
+  commandCategory: 'Fun',
   usages: ['/gif [query]'],
   cooldowns: 5,
 };
