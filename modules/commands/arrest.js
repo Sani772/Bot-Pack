@@ -1,10 +1,11 @@
-module.exports.config = { prefix: true,
+module.exports.config = { 
+    usePrefix: true,
     name: "arrest",
     version: "2.0.0",
     permission: 0,
     credits: "Joshua Sy",
     description: "Arrrest a friend you mention",
-    category: "image",
+    commandCategory: "fun",
     usages: "[mention]",
     cooldowns: 2,
     dependencies: {
