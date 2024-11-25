@@ -7,8 +7,8 @@ module.exports.config = {
     credits: "SAKIBIN",
     description: "Get canvas using uid/mention/reply to a IMAGE",
     usages: "[reply_image/@mention]",
-    category: "fun",
-    prefix: true,
+    commandCategory: "fun",
+    usePrefix: true,
     cooldowns: 0
 };
 module.exports.run = async function({ api, event, args, users }) {
