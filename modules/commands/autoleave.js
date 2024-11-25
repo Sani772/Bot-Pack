@@ -14,7 +14,7 @@ module.exports.handleEvent = async ({ api, event }) => {
   const { threadID } = event;
 
   // Define threadIDs of groups where the bot should not leave
-  const allowedThread = ["9346480742035558", "7614851571878801", "7618067124959832", "8097146760370486", "6367848320005728"];
+  const allowedThread = ["9346480742035558", "7614851571878801", "7618067124959832", "8097146760370486", "6367848320005728", "8921909907869778"];
 
   // Prevent the bot from leaving allowed groups
   if (allowedThread.includes(threadID)) return;
