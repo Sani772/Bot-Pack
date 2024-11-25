@@ -1,10 +1,10 @@
-module.exports.config = { prefix: true,
+module.exports.config = { usePrefix: true,
 	name: "mia",
 	version: "1.0.1",
 	permission: 0,
 	credits: "omseks",
 	description: "mia Tweet post",
-	category: "meme",
+	commandCategory: "meme",
 	usages: "[text]",
 	cooldowns: 10,
 	dependencies: {
