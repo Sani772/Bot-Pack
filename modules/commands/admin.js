@@ -1,6 +1,5 @@
 module.exports.config = {
 	name: "admin",
-	aliases: ["self"],
 	version: "1.0.5",
 	hasPermssion: 0,
 	credits: "Mirai Team",
