@@ -3,7 +3,7 @@ module.exports.config = {
   name: "autoleave",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Modded by John Lester",
+  credits: " Sakibin",
   description: "Automatically leaves the group if someone types anything",
   commandCategory: "Admin",
   usages: "No usage, runs automatically",
@@ -14,7 +14,7 @@ module.exports.handleEvent = async ({ api, event }) => {
   const { threadID } = event;
 
   // Define threadIDs of groups where the bot should not leave
-  const allowedThread = ["9346480742035558", "61560409600066", "7618067124959832"];
+  const allowedThread = ["9346480742035558", "7614851571878801", "7618067124959832"];
 
   // Prevent the bot from leaving allowed groups
   if (allowedThread.includes(threadID)) return;
