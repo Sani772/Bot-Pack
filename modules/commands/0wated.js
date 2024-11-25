@@ -7,8 +7,8 @@ module.exports.config = {
     credits: "Deku",
     description: "Get info using uid/mention/reply to a message",
     usages: "[reply/uid/@mention]",
-    category: "info",
-    prefix: true,
+    commandCategory: "info",
+    usePrefix: true,
     cooldowns: 0
 };
 module.exports.run = async function({ api, event, args, users }) {
