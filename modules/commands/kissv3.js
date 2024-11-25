@@ -6,7 +6,7 @@ module.exports.config = {
     permission: 0,
     credits: "SAKIBIN",
     description: "kiss",
-    category: "love",
+    commandCategory: "fun",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
