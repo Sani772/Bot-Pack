@@ -1,10 +1,11 @@
-module.exports.config = { prefix: true,
-    name: "marriedv2",
+module.exports.config = { 
+usePrefix: true,
+    name: "married",
     version: "3.1.1",
     permission: 0,
     credits: "SAKIBIN",
     description: "married",
-    category: "love",
+    commandCategory: "love",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
