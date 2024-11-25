@@ -1,12 +1,13 @@
 const APIURL = "https://gpt-19zs.onrender.com";
 //const APIKEY = "SAKI-BIN-SWT56X";
-module.exports.config = { prefix: true,
+module.exports.config = { 
+usePrefix: true,
   name: "text",
   version: "1.0.0",
   permission: 0,
   credits: "Sakibin",
   description: "Sakibin Design",
-  category: "edit",
+  commandCategory: "edit",
   usages: "/cover",
   cooldowns: 10,
 };
